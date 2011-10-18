@@ -2,6 +2,7 @@
 
 <IfModule mod_rewrite.c>
 	RewriteEngine on
+	#rewrite  ^([a-zA-Z0-9\-\_/]*)$ /simrs/farmasi/index.php/$1/;
 	RewriteRule ^([a-zA-Z0-9\-\_/]*)$ /simrs/index.php/$1/ [L]
 </IfModule>
 <IfModule mod_apache2.c>

@@ -1,4 +1,5 @@
 <? 
+echo '<pre>';print_r($_SESSION); exit;
    $_SESSION['status'] = 'RAWAT JALAN';
    include KOMPONEN_DIR . "header.php"; ?>
 <h3>Daftar Kunjungan Rawat Jalan</h3>

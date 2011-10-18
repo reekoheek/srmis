@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> SIM RUMAH SAKIT </title>
+<meta name="generator" content="editplus" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+<script language="javascript" type="text/javascript">
+function tutup() {
+	window.close();
+}
+function bukawindowutama(xurl) {
+	var lebar = screen.width;
+	var tinggi = screen.height;
+/*	var windowFeatures = "width=" + lebar + ",height=" + tinggi + ",resizable=1,alwaysRaised=1,left=0,top=0,scrollbar=yes";
+*/
+	var windowFeatures="toolbar=no, alwaysraised='+1+', fullScreen=no, locationbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width="+ lebar + ", height=" + tinggi + ", top=0, left=0 target=_self";
+	window.open(xurl,"",windowFeatures);
+	//window.open(xurl,"","fullscreen");
+}
+</script>
+</head>
+<body onload="bukawindowutama('/simrs/login.php')">
+</body>
+</html>
