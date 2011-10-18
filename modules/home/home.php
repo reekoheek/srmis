@@ -1,0 +1,3 @@
+<?
+$_TITLE = "Selamat Datang!";
+?>

@@ -1,0 +1,150 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Waktu pembuatan: 06. Oktober 2011 jam 15:14
+-- Versi Server: 5.1.37
+-- Versi PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `db_apotek`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(100) NOT NULL,
+  `name_menu` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `flags` bit(1) NOT NULL,
+  `created_datetime` datetime NOT NULL,
+  `created_user` varchar(20) NOT NULL,
+  `update_datetime` datetime NOT NULL,
+  `update_user` varchar(20) NOT NULL,
+  `Menu` int(11) NOT NULL,
+  `fld01` varchar(11) DEFAULT '0',
+  `fld02` varchar(11) DEFAULT '0',
+  `fld03` varchar(11) DEFAULT '0',
+  `fld04` varchar(255) DEFAULT '0',
+  `Link` varchar(50) DEFAULT 'content/#',
+  `group_id` int(11) DEFAULT NULL,
+  `fld07` int(11) DEFAULT NULL,
+  `fld08` varchar(255) DEFAULT NULL,
+  `fld09` varchar(255) DEFAULT NULL,
+  `f_aktif` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=125 ;
+
+--
+-- Dumping data untuk tabel `tbl_menu`
+--
+
+INSERT INTO `tbl_menu` (`id`, `code`, `name_menu`, `description`, `flags`, `created_datetime`, `created_user`, `update_datetime`, `update_user`, `Menu`, `fld01`, `fld02`, `fld03`, `fld04`, `Link`, `group_id`, `fld07`, `fld08`, `fld09`, `f_aktif`) VALUES
+(1, 'MFRM', 'Gudang', '-', b'1', '2011-06-26 03:37:23', '', '2011-07-13 15:13:26', '', 1, '0', '0', '0', '0', 'content/daftar_dokumen_farmasi', 2, NULL, NULL, NULL, 1),
+(2, 'MAPT', 'Pelayanan', '-', b'1', '2011-06-26 03:49:32', '', '2011-07-09 15:06:31', '', 1, '0', '0', '0', '0', 'content/list_spp', 2, NULL, NULL, NULL, 1),
+(3, 'MGDG', 'List Permintaan Pembelian', '-', b'1', '2011-06-26 03:50:09', '', '2011-10-06 01:30:50', '', 3, '1', '1', '123', '0', 'content/ps', 2, NULL, NULL, NULL, 1),
+(4, 'MRWJ', 'Rawat Jalan', '-', b'1', '2011-06-26 03:56:49', '', '2011-10-05 17:31:38', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(5, 'MPOR', 'Purchasing', '-', b'1', '2011-06-26 03:59:52', '', '2011-06-27 15:50:34', '', 1, '0', '0', '0', '0', 'content/#', 2, NULL, NULL, NULL, 1),
+(6, 'MKSR', 'Kasir', '-', b'1', '2011-06-26 04:00:30', '', '2011-08-16 12:55:45', '', 1, '0', '0', '0', '0', 'content/popup_ke_kasir', 2, NULL, NULL, NULL, 1),
+(7, 'MDMR', 'Data Master', '-', b'1', '2011-06-26 04:01:57', '', '0000-00-00 00:00:00', '', 2, '1', '53', '0', '0', 'content/#', 2, NULL, NULL, NULL, 1),
+(8, 'MSTP', 'Setup', '-', b'1', '2011-06-26 04:02:22', '', '0000-00-00 00:00:00', '', 2, '1', '53', '0', '0', 'content/#', 2, NULL, NULL, NULL, 1),
+(9, 'MMNU', 'Master Daftar Menu', '-', b'1', '2011-06-26 04:03:21', '', '2011-06-27 19:00:30', '', 3, '1', '53', '8', '2', 'setup/tbl_menu', 2, NULL, NULL, NULL, 1),
+(11, 'MMTU', 'Master Pelayanan', '-', b'1', '2011-06-26 04:53:17', '', '2011-06-28 17:23:32', '', 3, '1', '53', '7', '0', 'content/unit', 2, NULL, NULL, NULL, 1),
+(12, 'MGRB', 'Master Group Barang', '-', b'1', '2011-06-26 04:59:23', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/group_barang', 2, NULL, NULL, NULL, 1),
+(13, 'MJOB', 'Master Jenis Obat', '-', b'1', '2011-06-26 05:01:22', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/jenis_obat', 2, NULL, NULL, NULL, 1),
+(14, 'MTOB', 'Master Type Obat', '-', b'1', '2011-06-26 05:02:41', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/jenis_obat', 2, NULL, NULL, NULL, 1),
+(15, 'MGOB', 'Master Golongan Obat', '-', b'1', '2011-06-26 05:03:41', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/golongan_obat', 2, NULL, NULL, NULL, 1),
+(16, 'MGNO', 'Master Guna Obat', '-', b'1', '2011-06-26 05:05:03', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/guna_obat', 2, NULL, NULL, NULL, 1),
+(17, 'MKSI', 'Master Kla.Inventory', '-', b'1', '2011-06-26 05:06:45', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/klasifikasi_inventory', 2, NULL, NULL, NULL, 1),
+(18, 'MDOB', 'Master Dosis', '-', b'1', '2011-06-26 05:07:56', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/dosis', 2, NULL, NULL, NULL, 1),
+(19, 'MSTN', 'Master Satuan', '-', b'1', '2011-06-26 05:09:05', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/satuan', 2, NULL, NULL, NULL, 1),
+(20, 'MUSR', 'Master User ', '-', b'1', '2011-06-26 05:11:11', '', '2011-06-28 14:58:18', '', 3, '1', '53', '8', '0', 'setup/user_access_level', 0, NULL, NULL, NULL, 1),
+(21, 'MPBF', 'Master PBF', '-', b'1', '2011-06-26 05:21:16', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/pbf', 2, NULL, NULL, NULL, 1),
+(22, 'MUAC', 'Master Type Access Level', '-', b'1', '2011-06-26 05:46:13', '', '2011-06-28 14:57:22', '', 3, '1', '53', '8', '0', 'setup/leveling_akses', 2, NULL, NULL, NULL, 1),
+(23, 'MGRD', 'Master Group Dept', '-', b'1', '2011-06-26 05:50:02', '', '2011-06-26 05:18:20', '', 3, '1', '53', '8', '0', 'setup/user_group', 2, NULL, NULL, NULL, 1),
+(25, 'MLSP', 'List Permintaan', '-', b'1', '2011-06-26 06:27:04', '', '2011-06-26 10:27:40', '', 2, '1', '5', '0', '0', 'content/list_spb_grid', 2, NULL, NULL, NULL, 1),
+(27, 'MNPO', 'Manual PO', '-', b'1', '2011-06-26 06:29:39', '', '2011-06-27 03:10:52', '', 2, '1', '5', '0', '0', 'content/po_processing', 2, NULL, NULL, NULL, 1),
+(28, 'MRCO', 'Penerimaan Order', '-', b'1', '2011-06-26 06:30:55', '', '2011-07-26 06:35:43', '', 2, '1', '5', '0', '0', 'content/list_po&sent=2', 2, NULL, NULL, NULL, 1),
+(29, 'MNRT', 'Retur Pembelian', '-', b'1', '2011-06-26 06:31:50', '', '2011-06-29 03:39:01', '', 2, '1', '5', '0', '0', 'content/list_po', 2, NULL, NULL, NULL, 1),
+(30, 'MACC', 'Keuangan', '-', b'1', '2011-06-26 06:36:14', '', '2011-07-25 03:22:27', '', 1, '0', '0', '0', '0', 'content/list_coa', 2, NULL, NULL, NULL, 1),
+(31, 'MRQO', 'Permintaan Pembelian', '-', b'1', '2011-06-26 06:43:06', '', '2011-10-06 01:31:19', '', 3, '1', '1', '123', '0', 'content/list_spb_grid', 2, NULL, NULL, NULL, 1),
+(32, 'MLPO', 'List Purchase Order', '-', b'1', '2011-06-26 06:44:26', '', '2011-06-27 03:06:57', '', 2, '1', '5', '0', '0', 'content/list_po', 2, NULL, NULL, NULL, 1),
+(34, 'MPNO', 'Bukti Penerimaan Barang/ Obat', '-', b'1', '2011-06-26 06:47:39', '', '2011-10-06 01:38:40', '', 3, '1', '1', '124', '0', 'content/distribusi_obat&f=1', 2, NULL, NULL, NULL, 1),
+(81, 'MRRJ', 'Input Resep', '-', b'1', '2011-07-10 12:13:41', '', '2011-07-10 11:14:48', '', 2, '1', '4', '0', '0', 'content/resep_reg_rawat_jalan', 1, NULL, NULL, NULL, 1),
+(36, 'MPLO', 'Bukti Pengeluaran Barang/ Obat', '-', b'1', '2011-06-26 06:49:20', '', '2011-10-06 01:38:57', '', 3, '1', '1', '124', '0', 'content/distribusi_obat&f=2', 2, NULL, NULL, NULL, 1),
+(38, 'MRNT', 'Margin', '-', b'1', '2011-06-26 06:52:11', '', '2011-06-28 14:30:13', '', 2, '1', '30', '0', '0', 'content/margin', 0, NULL, NULL, NULL, 1),
+(49, 'MGRU', 'Master Group Unit', '-', b'1', '2011-06-26 04:43:24', '', '2011-06-27 21:09:33', '', 3, '1', '53', '7', '0', 'content/group_unit', 0, NULL, NULL, NULL, 1),
+(41, 'MRSTO', 'Bukti Penerimaan Stok', '-', b'1', '2011-06-26 06:56:30', '', '2011-06-30 21:59:47', '', 2, '1', '2', '0', '0', 'content/list_BTB', 2, NULL, NULL, NULL, 1),
+(48, 'MSGU', 'Stock Gudang Rawat Jalan', '-', b'1', '2011-06-26 01:33:47', '', '2011-06-28 00:13:44', '', 2, '1', '4', '0', '0', 'content/daftar_barang_unit', 1, NULL, NULL, NULL, 1),
+(44, 'MSTGA', 'Stok Gudang Apotek', '-', b'1', '2011-06-26 07:14:38', '', '2011-06-27 16:37:16', '', 2, '1', '2', '0', '0', 'content/daftar_barang_unit', 2, NULL, NULL, NULL, 1),
+(47, 'MBPU', 'Bukti Penerimaan Stok', '-', b'1', '2011-06-26 01:21:45', '', '2011-06-30 22:40:13', '', 2, '1', '4', '0', '0', 'content/list_BTB', 2, NULL, NULL, NULL, 1),
+(46, 'MTYI', 'Master Type Accsess', '-', b'1', '2011-06-26 11:36:49', '', '0000-00-00 00:00:00', '', 3, '1', '53', '8', '0', 'setup/user_type', 2, NULL, NULL, NULL, 1),
+(50, 'MRTI', 'Rawat Inap', '-', b'1', '2011-06-26 11:50:40', '', '2011-10-05 17:31:57', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(51, 'MIGD', 'IGD', '-', b'1', '2011-06-26 11:51:00', '', '2011-10-05 17:32:14', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(52, 'MOCA', 'OK (Ruang Tindakan)', '-', b'1', '2011-06-26 11:51:51', '', '2011-10-05 17:32:31', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(53, 'MADM', 'Administrator', '-', b'1', '2011-06-26 02:29:27', '', '2011-07-06 06:05:16', '', 1, '0', '0', '0', '0', 'content/Admin', 2, NULL, NULL, NULL, 1),
+(54, 'MRSP', 'Input Resep', '-', b'1', '2011-06-26 03:41:25', '', '0000-00-00 00:00:00', '', 2, '1', '2', '39', '0', 'content/pasien', 2, NULL, NULL, NULL, 1),
+(62, 'MLPS', 'List Permintaan Stock Unit', '-', b'1', '2011-06-27 04:53:00', '', '2011-10-06 01:36:23', '', 3, '1', '1', '124', '0', 'content/distribusi_obat', 2, NULL, NULL, NULL, 1),
+(66, 'MSIG', 'Stock Gudang IGD', '-', b'1', '2011-06-28 12:56:59', '', '2011-07-10 00:19:22', '', 2, '1', '51', '0', '0', 'content/daftar_barang_unit', 1, NULL, NULL, NULL, 1),
+(65, 'MSRI', 'Stock Gudang Rawat Inap', '-', b'1', '2011-06-28 12:55:27', '', '0000-00-00 00:00:00', '', 2, '1', '50', '0', '0', 'content/daftar_barang_unit', 1, NULL, NULL, NULL, 1),
+(67, 'MSOC', 'Stock Gudang OK', '-', b'1', '2011-06-28 12:58:56', '', '2011-07-25 01:57:45', '', 2, '1', '52', '0', '0', 'content/daftar_barang_unit', 0, NULL, NULL, NULL, 1),
+(68, 'MTOM', 'Master Otoritas Menu', '-', b'1', '2011-06-28 04:21:45', '', '2011-06-28 15:28:43', '', 3, '1', '53', '8', '0', 'setup/Otoritas_Menu', 2, NULL, NULL, NULL, 1),
+(84, 'MTRK', 'Transaksi', '-', b'1', '2011-07-13 04:30:58', '', '2011-08-16 12:56:19', '', 2, '1', '6', '0', '0', 'content/popup_ke_kasir', 2, NULL, NULL, NULL, 1),
+(72, 'MSOP', 'Stok Opname', '-', b'1', '2011-07-04 05:24:29', '', '2011-07-04 22:51:52', '', 2, '1', '1', '0', '0', 'content/stok_opname', 2, NULL, NULL, NULL, 1),
+(73, 'MLBF', 'List Master Barang', '-', b'1', '2011-07-04 09:43:09', '', '2011-07-25 22:21:10', '', 2, '1', '1', '0', '0', 'content/daftar_barang', 2, NULL, NULL, NULL, 1),
+(74, 'MLPS', 'List Permintaan Stock Unit', '-', b'1', '2011-07-04 11:06:28', '', '2011-07-04 22:15:17', '', 2, '1', '2', '0', '0', 'content/distribusi_obat&ket_status=1', 2, NULL, NULL, NULL, 1),
+(75, 'MIRI', 'Input Resep', '-', b'1', '2011-07-06 07:51:46', '', '0000-00-00 00:00:00', '', 2, '1', '51', '0', '0', 'content/resep_reg_igd', 1, NULL, NULL, NULL, 1),
+(76, 'MIGB', 'Bukti Penerimaan Stok', '-', b'1', '2011-07-06 07:57:13', '', '2011-07-13 23:23:51', '', 2, '1', '51', '0', '0', 'content/list_BTB', 1, NULL, NULL, NULL, 1),
+(77, 'MOCI', 'Input Resep', '-', b'1', '2011-07-06 08:11:24', '', '0000-00-00 00:00:00', '', 2, '1', '52', '0', '0', 'content/resep_reg_oca', 1, NULL, NULL, NULL, 1),
+(78, 'MOCB', 'Bukti Penerimaan Stok', '-', b'1', '2011-07-06 08:14:17', '', '2011-07-14 11:29:23', '', 2, '1', '52', '0', '0', 'content/list_BTB', 1, NULL, NULL, NULL, 1),
+(79, 'MCSU', 'Controlling Stok Unit', '-', b'1', '2011-07-09 01:06:08', '', '2011-07-09 00:08:39', '', 2, '1', '1', '0', '0', 'content/daftar_barang_unit&f=1', 2, NULL, NULL, NULL, 1),
+(80, 'MCMK', 'Menu Kasir', '-', b'1', '2011-07-09 04:30:37', '', '2011-08-16 12:56:35', '', 2, '1', '2', '0', '0', 'content/popup_ke_kasir', 2, NULL, NULL, NULL, 1),
+(82, 'MRRI', 'Input Resep', '-', b'1', '2011-07-10 12:16:40', '', '0000-00-00 00:00:00', '', 2, '1', '50', '0', '0', 'content/resep_reg_rawat_inap', 1, NULL, NULL, NULL, 1),
+(83, 'MBRI', 'Bukti Penerimaan Stok', '-', b'1', '2011-07-10 12:18:09', '', '2011-07-14 11:28:52', '', 2, '1', '50', '0', '0', 'content/list_BTB', 1, NULL, NULL, NULL, 1),
+(87, 'MLBR', 'Laboratorium', '-', b'1', '2011-07-14 02:43:44', '', '2011-10-05 17:32:51', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(86, 'MLKR', 'Laporan Transaksi', '-', b'1', '2011-07-13 04:43:02', '', '2011-07-13 15:43:39', '', 2, '1', '6', '0', '0', 'content/lap_kasir', 2, NULL, NULL, NULL, 1),
+(88, 'MSOL', 'Stock Gudang Laboratorium', '-', b'1', '2011-07-14 02:51:29', '', '0000-00-00 00:00:00', '', 2, '1', '87', '0', '0', 'content/daftar_barang_unit', 1, NULL, NULL, NULL, 1),
+(89, 'MIRL', 'Input Resep', '-', b'1', '2011-07-14 02:52:51', '', '0000-00-00 00:00:00', '', 2, '1', '87', '0', '0', 'content/resep_reg_lab', 1, NULL, NULL, NULL, 1),
+(90, 'MBPL', 'Bukti Penerimaan Stok', '-', b'1', '2011-07-14 02:54:54', '', '0000-00-00 00:00:00', '', 2, '1', '87', '0', '0', 'content/list_BTB', 1, NULL, NULL, NULL, 1),
+(91, 'MRDL', 'Radiologi', '-', b'1', '2011-07-14 02:59:48', '', '2011-10-05 17:33:08', '', 1, '0', '0', '0', '0', 'content/list_spp', 1, NULL, NULL, NULL, 0),
+(92, 'MSGR', 'Stok Gudang Radiologi', '-', b'1', '2011-07-14 03:01:01', '', '0000-00-00 00:00:00', '', 2, '1', '91', '0', '0', 'content/daftar_barang_unit', 1, NULL, NULL, NULL, 1),
+(93, 'MIRR', 'Input Resep', '-', b'1', '2011-07-14 03:02:31', '', '0000-00-00 00:00:00', '', 2, '1', '91', '0', '0', 'content/resep_reg_radiologi', 1, NULL, NULL, NULL, 1),
+(94, 'MBTR', 'Bukti Penerimaan Stok', '-', b'1', '2011-07-14 03:03:33', '', '0000-00-00 00:00:00', '', 2, '1', '91', '0', '0', 'content/list_BTB', 1, NULL, NULL, NULL, 1),
+(95, 'MPJB', 'Penjualan Bebas', '-', b'1', '2011-07-14 08:18:32', '', '0000-00-00 00:00:00', '', 2, '1', '2', '0', '0', 'content/resep_reg_umum', 1, NULL, NULL, NULL, 1),
+(96, 'MLBK', 'List Barang Kadaluarsa', '-', b'1', '2011-07-17 09:25:39', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/daftar_barang_kadaluarsa', 2, NULL, NULL, NULL, 1),
+(97, 'MDRK', 'Daftar Rekening', '-', b'1', '2011-07-19 10:56:08', '', '2011-07-19 10:03:28', '', 2, '1', '30', '0', '0', 'content/daftar_akun', 2, NULL, NULL, NULL, 1),
+(98, 'MJRU', 'Jurnal Umum', '-', b'1', '2011-07-19 10:56:51', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/jurnal_umum', 2, NULL, NULL, NULL, 1),
+(99, 'MJBB', 'Buku Besar', '-', b'1', '2011-07-19 10:58:39', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/lihat_buku_besar', 2, NULL, NULL, NULL, 1),
+(100, 'MJPY', 'Jurnal Penyesuaian', '-', b'1', '2011-07-19 10:59:33', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/jurnal_penyesuaian', 2, NULL, NULL, NULL, 1),
+(101, 'MNRC', 'Neraca Lajur', '-', b'1', '2011-07-19 11:00:13', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/neraca_lajur', 2, NULL, NULL, NULL, 1),
+(102, 'MAMC', 'List AMC', '-', b'1', '2011-08-01 07:07:00', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/daftar_amc', 2, NULL, NULL, NULL, 1),
+(103, 'MMSL', 'List Min-Max Stock Level', '-', b'1', '2011-08-01 07:08:35', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/daftar_min_max_lv', 2, NULL, NULL, NULL, 1),
+(104, 'MMSQ', 'List Min-Max Quantity', '-', b'1', '2011-08-01 07:10:03', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/daftar_quantity', 2, NULL, NULL, NULL, 1),
+(105, 'MDOQ', 'List Order Quantity', '-', b'1', '2011-08-01 08:04:33', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/daftar_order_qty', 2, NULL, NULL, NULL, 1),
+(106, 'MUPG', 'Ubah Password', '-', b'1', '2011-08-01 02:52:29', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(107, 'MUPP', 'Ubah Password', '-', b'1', '2011-08-01 02:53:33', '', '0000-00-00 00:00:00', '', 2, '1', '2', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(108, 'MPRJ', 'Ubah Password', '-', b'1', '2011-08-01 02:54:33', '', '0000-00-00 00:00:00', '', 2, '1', '4', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(109, 'MPPO', 'Ubah Password', '-', b'1', '2011-08-01 02:55:25', '', '0000-00-00 00:00:00', '', 2, '1', '5', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(110, 'MPKS', 'Ubah Password', '-', b'1', '2011-08-01 02:56:16', '', '0000-00-00 00:00:00', '', 2, '1', '6', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(111, 'MPKU', 'Ubah Password', '-', b'1', '2011-08-01 02:56:58', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(112, 'MPRI', 'Ubah Password', '-', b'1', '2011-08-01 02:57:46', '', '0000-00-00 00:00:00', '', 2, '1', '50', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(113, 'MPIG', 'Ubah Password', '-', b'1', '2011-08-01 02:58:30', '', '0000-00-00 00:00:00', '', 2, '1', '51', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(114, 'MPOK', 'Ubah Password', '-', b'1', '2011-08-01 02:59:04', '', '0000-00-00 00:00:00', '', 2, '1', '52', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(115, 'MPAD', 'Ubah Password', '-', b'1', '2011-08-01 02:59:49', '', '0000-00-00 00:00:00', '', 2, '1', '53', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(116, 'MPLA', 'Ubah Password', '-', b'1', '2011-08-01 03:00:30', '', '0000-00-00 00:00:00', '', 2, '1', '87', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(117, 'MPRA', 'Ubah Password', '-', b'1', '2011-08-01 03:01:04', '', '0000-00-00 00:00:00', '', 2, '1', '91', '0', '0', 'content/ubah_pwd_user', 2, NULL, NULL, NULL, 1),
+(118, 'MPRS', 'List Resep Unit', '-', b'1', '2011-08-02 10:12:25', '', '0000-00-00 00:00:00', '', 2, '1', '2', '0', '0', 'content/lihat_semua_resep', 2, NULL, NULL, NULL, 1),
+(119, 'MPBR', 'Master Pabrik', '-', b'1', '2011-08-12 02:38:14', '', '0000-00-00 00:00:00', '', 3, '1', '53', '7', '0', 'content/pabrik', 2, NULL, NULL, NULL, 1),
+(120, 'MLDO', 'Laporan Distribusi Obat', '-', b'1', '2011-08-12 07:30:49', '', '2011-08-12 07:02:20', '', 2, '1', '1', '0', '0', 'content/lap_distribusi', 2, NULL, NULL, NULL, 1),
+(121, 'MCDO', 'Cetak Distribusi Obat', '-', b'1', '2011-08-13 03:05:25', '', '2011-08-13 02:05:53', '', 2, '1', '1', '0', '0', 'content/cetak_distribusi_pengeluaran_barang', 2, NULL, NULL, NULL, 1),
+(122, 'MSMR', 'Sub Margin', '-', b'1', '2011-08-13 11:44:50', '', '0000-00-00 00:00:00', '', 2, '1', '30', '0', '0', 'content/sub_margin', 2, NULL, NULL, NULL, 1),
+(123, 'MTPO', 'Purchase Order', 'Purchase Order', b'1', '2011-10-06 01:25:17', '', '2011-10-06 01:25:21', '', 2, '1', '1', '0', '0', '-', 2, NULL, NULL, NULL, 1),
+(124, 'MTDBI', 'Distribusi Obat/ Barang', 'Distribusi Obat/ Barang', b'1', '2011-10-06 01:35:17', '', '0000-00-00 00:00:00', '', 2, '1', '1', '0', '0', '-', 2, NULL, NULL, NULL, 1);

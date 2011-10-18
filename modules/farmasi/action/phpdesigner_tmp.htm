@@ -1,0 +1,22 @@
+<?php
+	$tahun = date("Y");
+	$q = mysql_query ("SELECT * FROM amc,ms_barang WHERE amc.barang_id = ms_barang.kd_barang AND amc.tahun = '$tahun'");
+	while ($r=mysql_fetch_array($q))
+	{
+		$min = $r['stok_min'] * $r['rata_rata'];
+		$max = $r['stok_max'] * $r['rata_rata'];
+		//echo "min nya :". $min .", max nya : ". $max . "<br>";
+		//echo $r['id'];
+		$q_qty = mysql_query ("SELECT * FROM quantity WHERE barang_id = '$r[id]'");
+		$r_qty = mysql_fetch_array ($q_qty);
+		if (!$r_qty)
+		{
+			$q_masuk = "INSERT INTO quantity (barang_id, min_qty, max_qty) VALUES ('$r[id]', '$min', '$max')";
+			$r_masuk = mysql_query($q_masuk);
+		} 
+		else
+		{
+			$q_masuk = mysql_query("UPDATE quantity SET min_qty = '$min', max_qty = '$max' WHERE barang_id = '$r[id]'");
+		}
+	}
+?>

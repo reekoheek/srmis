@@ -1,0 +1,20 @@
+<HTML><HEAD><TITLE>dinner.htm by Red Daly</TITLE></HEAD>
+<BODY><FORM>
+<P>Demonstrates <I>selected</I> property.  See what you can afford for
+dinner.  Click on the radio button for a dollar amount and show your dinner in the select
+box..</P>
+<P><B>How much money do you have for dinner?</B><BR>
+<INPUT TYPE="radio" NAME="a"
+onClick="this.form.meal.options[0].selected=1">$10<BR>
+<INPUT TYPE="radio"
+NAME="a"onClick="this.form.meal.options[1].selected=1">$15<BR>
+<INPUT TYPE="radio"
+NAME="a"onClick="this.form.meal.options[2].selected=1">$20<BR></P>
+<B>Your dinner tonite is:</B><BR>
+<SELECT NAME="meal" >
+<OPTION VALUE="$10">Pizza
+<OPTION VALUE="$15">Extra Cheese Pizza
+<OPTION VALUE="$20">Extra Veggies Pizza
+</SELECT>
+</FORM></BODY>
+</HTML>

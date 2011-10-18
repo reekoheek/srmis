@@ -1,0 +1,299 @@
+<?
+Class Langsung_Bayar {
+	function buka_langsung_bayar($idkk) {
+		unset($_SESSION[igd][langsung_bayar]);
+		$kon = new Konek;
+		//$kon->debug = 1;
+		$objResponse = new xajaxResponse;
+		//get data pasien
+		$kon->sql = "
+			SELECT
+				CONCAT_WS('-', SUBSTRING(p.id, 1,2), SUBSTRING(p.id, 3,2), SUBSTRING(p.id, 5,2), SUBSTRING(p.id, 7,2)) as id_display,
+				p.nama as nama,
+				p.tgl_lahir as tgl_lahir,
+				CONCAT(p.alamat, ' ', IF(p.rt = '','',CONCAT(' RT ', p.rt)), IF(p.rw = '','',CONCAT(' RW ', p.rw)), ', ', des.nama, ', ', kec.nama, ', ', kab.nama) as alamat,
+				kk.tgl_periksa as tgl_periksa,
+				CONCAT_WS(' - ', pel.jenis, kmr.nama) as nama_pelayanan,
+				p.sex as jk,
+				CONCAT_WS(' - ', kk.cara_bayar, kk.jenis_askes, rper.nama) as cara_bayar,
+				kk.nomor as nomor,
+                CASE WHEN (kk.tgl_keluar IS NULL) THEN DATEDIFF(DATE(NOW()), kk.tgl_daftar)
+				ELSE DATEDIFF(kk.tgl_keluar, kk.tgl_daftar) END as lama_dirawat,
+                kk.kamar_id as kamar_id,
+                kk.cara_bayar as jenis_bayar
+			FROM
+				kunjungan_kamar kk
+				JOIN kunjungan k ON (k.id = kk.kunjungan_id)
+				JOIN pasien p ON (p.id = k.pasien_id)
+				JOIN kamar kmr ON (kmr.id = kk.kamar_id)
+				JOIN pelayanan pel ON (pel.id = kmr.pelayanan_id)
+				JOIN ref_desa des ON (des.id = p.desa_id)
+				JOIN ref_kecamatan kec ON (kec.id = des.kecamatan_id)
+				JOIN ref_kabupaten kab ON (kab.id = kec.kabupaten_id)
+				JOIN ref_propinsi prop ON (prop.id = kab.propinsi_id)
+				LEFT JOIN ref_perusahaan rper ON (rper.id = kk.perusahaan_id)
+			WHERE
+				kk.id = '".$idkk."'
+			GROUP BY
+				p.id
+		";
+		$kon->execute();
+		$data_pasien = $kon->getOne();
+		$arr_usia = hitungUmur($data_pasien[tgl_lahir], $data_pasien[tgl_periksa]);
+		$data_pasien[usia] = empty($arr_usia[tahun])?"":$arr_usia[tahun] . " thn ";
+		$data_pasien[usia] .= empty($arr_usia[bulan])?"":$arr_usia[bulan] . " bln ";
+		$data_pasien[usia] .= empty($arr_usia[hari])?"":$arr_usia[hari] . " hr ";
+		$objResponse->addClear("modal_lb", "style.display");
+		$objResponse->addAssign("lb_id_kunjungan_kamar", "value", $idkk);
+		$objResponse->addAssign("lb_no_rm", "innerHTML", $data_pasien[id_display]);
+		$objResponse->addAssign("lb_pasien", "innerHTML", $data_pasien[nama]);
+		$objResponse->addAssign("lb_sex", "innerHTML", $data_pasien[jk]);
+		$objResponse->addAssign("lb_usia", "innerHTML", $data_pasien[usia]);
+		$objResponse->addAssign("lb_alamat", "innerHTML", $data_pasien[alamat]);
+		$objResponse->addAssign("lb_tgl_periksa", "innerHTML", tanggalIndo($data_pasien[tgl_periksa], 'j F Y'));
+		$objResponse->addAssign("lb_cara_bayar", "innerHTML", $data_pasien[cara_bayar]);
+		$objResponse->addAssign("lb_pelayanan", "innerHTML", $data_pasien[nama_pelayanan]);
+		$objResponse->addAssign("lb_nomor", "innerHTML", empty($data_pasien[nomor])?"-":$data_pasien[nomor]);
+
+		//BIKIN SESSION UNTUK DICETAK
+		$_SESSION[igd][langsung_bayar][data_px] = $data_pasien;
+
+		$tabel = new Table;
+		$tabel->cellspacing = "0";
+		$tabel->scroll = false;
+		$tabel->extra_table = "style=\"width:9cm;\"";
+		$tabel->addTh("No", "Jasa", "Biaya");
+		$tabel->addExtraTh("style=\"width:0.7cm;\"", "style=\"width:6.5cm;\"", "");
+        
+        //bayar kamar
+        if ($data_pasien[lama_dirawat]==0) :
+            $lama_rawat = 1;
+         else:
+            $lama_rawat = $data_pasien[lama_dirawat];
+         endif;
+         //get informasi kamar        
+        for ($n=1;$n<=$lama_rawat;$n++){
+            $kon->sql = "
+                    SELECT kk.kamar_id as kamar_id, k.nama as nama_kamar, k.kelas as kelas, p.nama as bangsal,
+                    k.tarif_umum as tarif_umum, k.tarif_asuransi as tarif_asuransi ,rf.nomor as no_bed
+                    FROM kunjungan_kamar kk, kamar k, pelayanan p, ref_kamar rf
+                    WHERE kk.kamar_id = k.id AND k.pelayanan_id = p.id
+                    AND kk.no_kamar = rf.id
+                    AND kk.kamar_id ='".$data_pasien[kamar_id]."'";
+    
+            $kon->execute();
+    		$data_kamar = $kon->getAll();
+        
+        	if(!empty($data_kamar)) {
+    		$tabel->addRow("","<b>Ruang dan Akomodasi</b>","");
+               
+        		for($i=0;$i<sizeof($data_kamar);$i++) {
+        		   if ($data_pasien[jenis_bayar]=='UMUM'):
+                        $tarif = $data_kamar[$i][tarif_umum];  
+                    else:
+                        $tarif = $data_kamar[$i][tarif_asuransi];            
+                    endif;
+                
+        			$tabel->addRow(
+        				($i+1),
+        				$data_kamar[$i][bangsal]." Kamar ".$data_kamar[$i][nama_kamar]." - No Bed ". $data_kamar[$i][no_bed],         
+        				uangIndo($tarif)               
+        			);
+        			$total += $tarif;			
+        		}
+    		}
+        
+        }
+		//get data karcis
+		$kon->sql = "
+			SELECT
+				kb.nama as nama,
+				kb.bayar_bhp+kb.biaya_jasa as bayar,
+				kb.mampu_bayar_bhp+kb.mampu_bayar_jasa as mampu_bayar,
+				kwd.kwitansi_id as kwitansi_id
+			FROM
+				kunjungan_bayar kb
+				JOIN kunjungan_kamar kk ON (kk.id = kb.kunjungan_kamar_id)
+				LEFT JOIN kwitansi_detil kwd ON (kwd.kunjungan_bayar_id = kb.id)
+			WHERE
+				kb.karcis_id IS NOT NULL
+				AND kk.id = '".$idkk."'
+			GROUP BY
+				kb.id
+			ORDER BY kb.id
+		";
+		$kon->execute();
+		$data_karcis = $kon->getAll();
+		if(!empty($data_karcis)) {
+			$tabel->addRow("","<b>Karcis</b>","");
+            $objResponse->addAlert(sizeof($data_karcis));
+			for($i=0;$i<sizeof($data_karcis);$i++) {
+				$tabel->addRow(
+					($i+1),
+					$data_karcis[$i][nama],
+					uangIndo($data_karcis[$i][bayar])
+				);
+				$total += $data_karcis[$i][bayar];
+				$sudah_dibayar += $data_karcis[$i][mampu_bayar];
+				//belum bayar
+				if(!$data_karcis[$i][kwitansi_id]) $kurang += $data_karcis[$i][bayar];
+			}
+		}
+
+		//get data tindakan
+		$kon->sql = "
+			SELECT
+				kki.nama as nama,
+				SUM(kb.biaya_jasa) as bayar,
+				SUM(kb.mampu_bayar_jasa) as mampu_bayar,
+				kwd.kwitansi_id as kwitansi_id
+			FROM
+				kunjungan_kamar_icopim kki 
+				JOIN kunjungan_bayar kb ON (kb.kunjungan_kamar_icopim_id = kki.id)
+				LEFT JOIN kwitansi_detil kwd ON (kwd.kunjungan_bayar_id = kb.id)
+			WHERE
+				kb.icopim_detil_id IS NOT NULL
+				AND kki.kunjungan_kamar_id = '".$idkk."'
+			GROUP BY
+				kki.id
+			ORDER BY kki.id
+		";
+		$kon->execute();
+		$data_tindakan = $kon->getAll();
+		if(!empty($data_tindakan)) {
+			$tabel->addRow("","<b>Tindakan</b>","");
+			for($i=0;$i<sizeof($data_tindakan);$i++) {
+				$tabel->addRow(
+					($i+1),
+					$data_tindakan[$i][nama],
+					uangIndo($data_tindakan[$i][bayar])
+				);
+				$total += $data_tindakan[$i][bayar];
+				$sudah_dibayar += $data_tindakan[$i][mampu_bayar];
+				//belum bayar
+				if(!$data_tindakan[$i][kwitansi_id]) $kurang += $data_tindakan[$i][bayar];
+			}
+		}
+
+	//get data specimen
+		$kon->sql = "
+			SELECT
+				kb.nama as nama,
+				kb.bayar_bhp+kb.biaya_jasa as bayar,
+				kb.mampu_bayar_bhp+kb.mampu_bayar_jasa as mampu_bayar,
+				kwd.kwitansi_id as kwitansi_id
+			FROM
+				kunjungan_bayar kb
+				JOIN lab_kunjungan lk ON (lk.id = kb.lab_kunjungan_id)
+				JOIN kunjungan_kamar kk ON (kk.id = lk.kunjungan_kamar_id)
+				LEFT JOIN kwitansi_detil kwd ON (kwd.kunjungan_bayar_id = kb.id)
+			WHERE
+				kb.lab_specimen_id IS NOT NULL
+               	AND kk.id = '".$idkk."'
+			GROUP BY
+				kb.id
+			ORDER BY kb.id
+		";
+		$kon->execute();
+		$data_specimen = $kon->getAll();
+		if(!empty($data_specimen)) {
+			$tabel->addRow("","<b>Pemeriksaan Specimen</b>","");
+			for($i=0;$i<sizeof($data_specimen);$i++) {
+				$tabel->addRow(
+					($i+1),
+					$data_specimen[$i][nama],
+					uangIndo($data_specimen[$i][bayar])
+				);
+				$total += $data_specimen[$i][bayar];
+				$sudah_dibayar += $data_specimen[$i][mampu_bayar];
+				//belum bayar
+				if(!$data_specimen[$i][kwitansi_id]) $kurang += $data_specimen[$i][bayar];
+			}
+		}
+
+		//get data radio	
+        
+        $kon->sql = "
+			SELECT
+				kb.nama as nama,
+				kb.bayar_bhp+kb.biaya_jasa as bayar,
+				kb.mampu_bayar_bhp+kb.mampu_bayar_jasa as mampu_bayar,
+				kwd.kwitansi_id as kwitansi_id
+			FROM
+				kunjungan_bayar kb
+				JOIN radio_kunjungan lk ON (lk.id = kb.radio_kunjungan_id)
+                JOIN kunjungan_kamar kk ON (kk.id = lk.kunjungan_kamar_id)
+				LEFT JOIN kwitansi_detil kwd ON (kwd.kunjungan_bayar_id = kb.id)
+			WHERE
+				kb.radio_pemeriksaan_id IS NOT NULL               
+				AND kk.id = '".$idkk."'
+			GROUP BY
+				kb.id
+			ORDER BY kb.id
+		";
+        
+		$kon->execute();
+		$data_radio = $kon->getAll();
+		if(!empty($data_radio)) {
+			$tabel->addRow("","<b>Pemeriksaan Radiologi</b>","");
+			for($i=0;$i<sizeof($data_radio);$i++) {
+				$tabel->addRow(
+					($i+1),
+					$data_radio[$i][nama],
+					uangIndo($data_radio[$i][bayar])
+				);
+				$total += $data_radio[$i][bayar];
+				$sudah_dibayar += $data_radio[$i][mampu_bayar];
+				//belum bayar
+				if(!$data_radio[$i][kwitansi_id]) $kurang += $data_radio[$i][bayar];
+			}
+		}
+
+		//get data bhp
+		$kon->sql = "
+			SELECT
+				kb.nama as nama,
+				kb.bayar_bhp as bayar,
+				kb.mampu_bayar_bhp as mampu_bayar,
+				kwd.kwitansi_id as kwitansi_id
+			FROM
+				kunjungan_bayar kb
+				JOIN kunjungan_kamar kk ON (kk.id = kb.kunjungan_kamar_id)
+				LEFT JOIN kwitansi_detil kwd ON (kwd.kunjungan_bayar_id = kb.id)
+			WHERE
+				kb.bhp_id IS NOT NULL
+				AND kk.id = '".$idkk."'
+			GROUP BY
+				kb.id
+			ORDER BY kb.id
+		";
+		$kon->execute();
+		$data_bhp = $kon->getAll();
+		if(!empty($data_bhp)) {
+			$tabel->addRow("","<b>Bahan Habis Pakai</b>","");
+			for($i=0;$i<sizeof($data_bhp);$i++) {
+				$tabel->addRow(
+					($i+1),
+					$data_bhp[$i][nama],
+					uangIndo($data_bhp[$i][bayar])
+				);
+				$total += $data_bhp[$i][bayar];
+				$sudah_dibayar += $data_bhp[$i][mampu_bayar];
+				//belum bayar
+				if(!$data_bhp[$i][kwitansi_id]) $kurang += $data_bhp[$i][bayar];
+			}
+		}
+	//	$objResponse->addAlert($idkk);
+		$tabel->addRow("","<b>Total</b>", uangIndo($total));
+		$tabel_jasa = $tabel->build();
+		$tabel_jasa .= "<br />Terbilang : <i>" . terbilang($total) . "</i>";
+		$objResponse->addAssign("lb_list_jasa", "innerHTML", $tabel_jasa);
+		$objResponse->addScriptCall("disable_mainbar", "#E5E6E1");
+		return $objResponse;
+	}
+}
+
+$_xajax->registerFunction(array("buka_langsung_bayar", "Langsung_Bayar", "buka_langsung_bayar"));
+$_xajax->registerFunction(array("simpan_langsung_bayar", "Langsung_Bayar", "simpan_langsung_bayar"));
+
+?>

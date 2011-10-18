@@ -1,0 +1,99 @@
+/*style.css*/
+
+body {
+	font-family: Verdana, Verdana, Sans Serif;
+	font-size: 11px;
+}
+.portrait_document {
+	width: 20cm;
+	height: 27cm;
+	max-width: 20cm;!important
+	max-height: 27cm;!important
+}
+.landscape_document {
+	width: 27cm;
+	height: 20cm;
+	max-width: 27cm;!important
+	max-height: 20cm;!important
+}
+.header {
+	margin-top: 0.5cm;
+	text-align:center;
+	border:solid 1px #000000;
+	height: 2cm;
+	max-height: 2cm;
+}
+.portrait_content {
+	margin-top: 0.1cm;
+	border:solid 1px #000000;
+	height: 24cm;
+	max-height: 24cm;
+	padding-left: 0.5cm;
+	padding-right: 0.5cm;
+	overflow: hidden;
+}
+.landscape_content {
+	margin-top: 0.1cm;
+	border:solid 1px #000000;
+	height: 17cm;
+	max-height: 17cm;
+	padding-left: 0.5cm;
+	padding-right: 0.5cm;
+	overflow: hidden;
+}
+
+.subtitle {
+	text-align:center;
+}
+.content_before {
+	text-align: center;
+}
+.content_after {
+	text-align: left;
+}
+.portrait_tanda_tangan {
+	text-align:center;
+	margin-top: 0.3cm;
+	margin-left:10cm;
+}
+.landscape_tanda_tangan {
+	text-align:center;
+	margin-top: 0.3cm;
+	margin-left:19cm;
+}
+.tanda_tangan {
+	text-align:center;
+	margin-top: 0.3cm;
+	margin-left:10cm;
+}
+
+.footer {
+	margin-top: 0.1cm;
+	border:solid 1px #000000;
+	height: 0.5cm;
+	max-height: 0.5cm;
+	padding-left: 0.5cm;
+	padding-right: 0.5cm;
+	vertical-align:middle;
+}
+.footer_content {
+	width: 100%;
+	height: 100%;
+}
+.footer_content td {
+	width: 50%;
+}
+table.list {
+	margin-top: 0.5cm;
+	border: solid 0.2px #000000;
+	width: 100%;
+}
+table.list td {
+	vertical-align: top;
+	border: solid 0.2px #000000;
+	text-align: left;
+	padding-left:10px;
+}
+table.list th {
+	border: solid 0.2px #000000;
+}

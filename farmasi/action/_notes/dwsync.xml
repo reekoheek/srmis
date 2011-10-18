@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+	<file name="insert_permintaan_obat.php" local="129537638039057636"
+		remote="129537638030000000" testing="129537638030000000" />
+	<file name="insert_SPP.php" local="129537747931883146" remote="129537747930000000"
+		testing="129537747930000000" />
+	<file name="insert_pbf.php" local="129535111241192392" remote="129535111240000000"
+		testing="129535111240000000" />
+	<file name="update_unit.php" local="129537284317075896" remote="129537284310000000"
+		testing="129537284310000000" />
+	<file name="insert_unit.php" local="129537284555709545" remote="129537284550000000"
+		testing="129537284550000000" />
+	<file name="hapus_group_unit.php" local="129536550322429315"
+		remote="129536550320000000" testing="129536550320000000" />
+	<file name="insert_group_unit.php" local="129536562487835137"
+		remote="129536562480000000" testing="129536562480000000" />
+	<file name="update_group_unit.php" local="129536561384602035"
+		remote="129536561380000000" testing="129536561380000000" />
+	<file name="hapus_permintaan_obat.php" local="129537638467592146"
+		remote="129537638460000000" testing="129537638460000000" />
+	<file name="insert_bpb.php" local="129540157530843707" remote="129540157530000000"
+		testing="129540157530000000" />
+	<file name="approve_distribusi.php" local="129540309773321479"
+		remote="129540309770000000" testing="129540309770000000" />
+	<file name="insert_rpb.php" local="129543720094990023" remote="129543720090000000"
+		testing="129543720090000000" />
+	<file name="terima_barang.php" local="129540394757592301" remote="129540394750000000"
+		testing="129540394750000000" />
+	<file name="update_distribusi_kontrol.php" local="129540161461548531"
+		remote="129540161460000000" testing="129540161460000000" />
+	<file name="insert_total_pembayaran.php" local="129540186661799903"
+		remote="129540186660000000" testing="129540186660000000" />
+	<file name="insert_btb.php" local="129543499261959096" remote="129543499260000000"
+		testing="129543499260000000" />
+	<file name="terima_barang_unit.php" local="129540380886088897"
+		remote="129540380880000000" testing="129540380880000000" />
+	<file name="insert_pencetakan_apt.php" local="129631620395723298"
+		remote="129631617750000000" testing="129631617750000000" />
+	<file name="simpan_resep_rawat_jalan.php" local="129629156722718667"
+		remote="129629152440000000" testing="129629152440000000" />
+	<file name="insert_pencetakan_rawat_jalan.php" local="129629157451538651"
+		remote="129629156730000000" testing="129629156730000000" />
+</dwsync>

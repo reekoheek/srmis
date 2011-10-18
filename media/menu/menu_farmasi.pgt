@@ -1,0 +1,28 @@
+========== Description Part Begin ==========
+Description = 
+LastUpdateTime = 37434.458101852
+PreviewPath = 
+ProgID = PageletServer.DynamicMenu
+Title = AppMenu1
+Version = 6.00
+========== Description Part End ==========
+========== Parameter Part Begin ==========
+CrossFrame = 0;0;0;0;Main_frame;1;;Navigation_frame;0
+MenuBody0 = 4;0;2;1;0;0;0;0;0;3;0 ~#000000;0;0;90;0;3;0;0 ~#000000;0;0;0;13818075 ~#DBD8D2;0;;3
+MenuBody1 = 3;1;0;3;0;0;0;0;2;3;10066329 ~#999999;1;0;67;1;1;0;6710886 ~#666666;6710886;6710886;6710886;16251129 ~#F9F8F7;0;E:\\www\\simrs\\media\\menu\\bg_pulldown.gif;2
+MenuBody2 = 1;1;0;3;0;0;0;0;2;3;10066329 ~#999999;1;0;67;1;1;0;6710886 ~#666666;6710886;6710886;6710886;16251129 ~#F9F8F7;0;E:\\www\\simrs\\media\\menu\\bg_pulldown.gif;2
+MenuBody3 = 2;1;0;3;0;0;0;0;2;3;10066329 ~#999999;1;0;67;1;1;0;6710886 ~#666666;6710886;6710886;6710886;16251129 ~#F9F8F7;0;E:\\www\\simrs\\media\\menu\\bg_pulldown.gif;2
+MenuItem0_0 = 0;0;;;0;1;10070188 ~#ACA899;1;E:\\www\\simrs\\media\\menu\\toolbar.start.gif;;3;15;0
+MenuItem0_1 = 0;2;;;0; File ;0;0;1;;;_self;;1;15659761 ~#F1F2EE;13811126 ~#B6BDD2;1;0;;;3;3;1;1;1;0;13818075 ~#DBD8D2;13818075;13818075;13818075;6956042 ~#0A246A;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem0_2 = 2;2;;;0; Farmasi ;0;0;1;;;_self;;1;15659761 ~#F1F2EE;13811126 ~#B6BDD2;1;0;;;3;3;1;1;1;0;13818075 ~#DBD8D2;13818075;13818075;13818075;6956042 ~#0A246A;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem0_3 = 0;2;;;0; Help ;0;0;1;;;_self;;1;15659761 ~#F1F2EE;13811126 ~#B6BDD2;1;0;;;3;2;1;1;1;0;13818075 ~#DBD8D2;13818075;13818075;13818075;6956042 ~#0A246A;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem1_0 = 0;1;;;0;Home;0;0;1;;home/home/;_self;;1;16251129 ~#F9F8F7;13811126 ~#B6BDD2;1;0;;;2;3;0;1;0;0;16252927 ~#FFFFF7;16252927;16252927;16252927;6956042 ~#0A246A;6956042;6956042;6956042;E:\\www\\simrs\\media\\menu\\menu_home.png;E:\\www\\simrs\\media\\menu\\menu_home.png;16;16;0;;;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_r.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_w.gif;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem1_1 = 0;0;;;0;1;10070188 ~#ACA899;0;;;0;0;0
+MenuItem1_2 = 0;1;;;0;Keluar          ;0;0;1;;login.php?page=logout;_self;;1;16251129 ~#F9F8F7;13811126 ~#B6BDD2;1;0;;;2;3;0;1;0;0;16252927 ~#FFFFF7;16252927;16252927;16252927;6956042 ~#0A246A;6956042;6956042;6956042;E:\\www\\simrs\\media\\menu\\menu_logout.png;E:\\www\\simrs\\media\\menu\\menu_logout.png;16;16;0;;;0;0;0;;;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem2_0 = 0;1;;;0; Farmasi ;0;0;1;;farmasi/verification.php;_self;;1;16777215 ~#FFFFFF;13811126 ~#B6BDD2;1;0;;;2;3;0;0;0;0;16252927 ~#FFFFF7;16252927;16252927;16252927;0 ~#000000;0;0;0;;;-1;-1;0;;;-1;-1;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem3_0 = 0;1;;;0;Manual SIMRS     ;0;0;1;;simrs_manual.doc;_self;;1;16777215 ~#FFFFFF;13811126 ~#B6BDD2;1;0;;;2;2;0;0;0;0;16252927 ~#FFFFF7;16252927;16252927;16252927;0 ~#000000;0;0;0;;;16;16;0;;;-1;-1;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem3_1 = 0;1;;;0;About;0;0;1;;javascript:show_about();_self;;1;16777215 ~#FFFFFF;13811126 ~#B6BDD2;1;0;;;2;2;0;0;0;0;16252927 ~#FFFFF7;16252927;16252927;16252927;0 ~#000000;0;0;0;;;-1;-1;0;;;-1;-1;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0 ~#000000;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+Scrolling0 = 0;16252927 ~#FFFFF7;1;14073525 ~#B5BED6;1;;;3;3;0;1;1;16252927 ~#FFFFF7;16252927;16252927;16252927;1;0 ~#000000;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_enabled.gif;-1;-1;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_enabled.gif;-1;-1;0;0;1
+Scrolling1 = 0;16252927 ~#FFFFF7;1;14073525 ~#B5BED6;1;;;3;3;0;1;1;16252927 ~#FFFFF7;16252927;16252927;16252927;1;0 ~#000000;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_enabled.gif;-1;-1;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_enabled.gif;-1;-1;0;0;1
+TopMenuBody = 2;600;uueoehr;0;1;1;0;0;0;0;1000;0;0;http://localhost/simsekarwangi/images/;1;0;0;http://localhost/simsekarwangi/;1;0;100;0;http://localhost/simsekarwangi/media/menu/;67108909;;0;1;1;default;hand
+========== Parameter Part End ==========

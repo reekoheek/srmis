@@ -1,0 +1,4 @@
+x = select kode_obat, sum(diminta)as jml from resep group by kode_obat;
+y = select id, kd_barang, stok, stok_min from ms_barang where kd_barang = x[kode_obat] group by kd_barang ;
+z = y[stok] - x[jml]
+if (z >= y[stok_min]) { allow = "true" } else {allow = "false"}

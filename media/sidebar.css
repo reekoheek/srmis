@@ -1,0 +1,85 @@
+#sidebar {
+	position: relative;
+	overflow: hidden;
+	left: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-bottom: 20px;
+	/*background-image: url('../images/pku.gif');
+	background-repeat: no-repeat;
+	background-position: 130% 100%;*/
+}
+.td_sidebar {
+	width:150px;
+	background-color: #F0F1E8;
+	background-image: url('../images/bg_sidebar.gif');
+	background-repeat: repeat-y;
+}
+#sidebar .infobar_list {
+	padding: 5px 1px 0px 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+#sidebar .infobar_list li {
+	padding: 0px 5px 0px 15px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	list-style-type: none;
+	line-height: 1.1em;
+	color: #777777;
+}
+
+#sidebar .infobar_jml_pasien {
+	padding: 5px 1px 0px 0px;
+	margin-left: 20px;
+	list-style-type: decimal;
+}
+
+#sidebar .infobar_jml_pasien li {
+	padding: 0px 5px 0px 15px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	
+	list-style-type: decimal;
+	line-height: 1.1em;
+	color: #777777;
+}
+
+#sidebar h3 {
+	color: #072F06;
+	font-family: 'Trebuchet', Tahoma, Arial, Geneva, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	margin: 10px 0 10px 10px;
+}
+
+#sidebar a:link {
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #072F06;
+}
+#sidebar a:visited {
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #072F06;
+}
+#sidebar a:hover {
+	color: #A0410D;
+}
+
+#sidebar hr {
+	border-top: #e0e1d9 1px solid;
+	border-bottom: #ffffff 1px solid;
+	width: 90%;
+}
+#sidebar .chat_list_pesan {
+	padding-left:30px;
+}
+#sidebar .chat_list_pesan li {
+	padding: 0 0 0 0;
+	margin: 0 0 10px 0;
+	list-style-type: decimal;
+}

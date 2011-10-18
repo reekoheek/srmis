@@ -1,0 +1,95 @@
+.window_modal {
+	position:absolute;
+	height:auto;
+	background-color:#F8F9F5;
+	border-top:solid 2px #D4D0C8;
+	border-left:solid 2px #D4D0C8;
+	border-right:solid 2px #808080;
+	border-bottom:solid 2px #808080;
+	padding: 0 0 20px 0;
+	/*overflow:fixed;*/
+}
+.modal_title_bar {
+	padding:5px 0 0 5px;
+	height: 20px;
+	font-family: 'Trebuchet MS', Arial, Geneva, sans-serif;
+	font-size: 11px;
+	color: #ffff00;
+	background-color: #707070;
+	/*color: #000000;
+	background-image: url('../images/bar.png');
+	background-repeat: repeat-x;*/
+	border: solid 1px #000000;
+	font-weight:bold;
+}
+.modal_button_group {
+	text-align:right;
+	top:0;
+	right:0;
+	position:absolute;
+}
+.modal_button_group img {
+	padding:3px 3px 0 3px;
+	cursor: pointer;
+}
+.modal_content_container {
+	margin-top: 10px;
+}
+.modal_content {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.close_button {
+	float: right;
+	right:0;
+	margin-top:2px;
+	cursor: pointer;
+}
+.close_button2 {
+	cursor: pointer;
+	border-left: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+}
+.printer_button {
+	cursor: pointer;
+	right: 30px;
+	border-left: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+}
+.biaya {
+	text-align:right;
+	position: relative;
+	border-bottom:dotted 1px #000000;
+	top:-14px;
+	margin-left:51px;
+	margin-bottom:-14px;
+	height:12px;
+}
+.tabel_biaya {
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.tabel_biaya th {
+	border:dotted 1px #000000;
+	background-color: #F8F8F8;
+}
+.tabel_biaya td {
+	border:dotted 1px #000000;
+	padding:4px;
+}
+.btn_add {
+	text-decoration: none;
+	font-weight:bold;
+	color: #336600;
+}
+.btn_add:visited {
+	color: #336600;
+}
+.fieldset_modal {
+	background-color: #F0F1E8;
+	border: solid 1px #000000;
+}
+.fieldset_modal legend {
+	color: #0000FF;
+}

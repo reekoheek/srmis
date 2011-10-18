@@ -1,0 +1,64 @@
+- KURANGI MESSAGE BOX 
+- STILL LACK OF FORM VALIDATIONS 
+- PLEASE SIMULATE THIS APPLICATION BASED ON THE PROPER BUSINESS 
+  PROCESS, AND TEST IT FOR MASSIVE DATA, MASSIVE TRANSACTION 
+  NOT ONLY ONE TIME TESTING, USE OVERRIDE CONDITION COZ THERE
+  ARE SO MANY TRANSACTION THAT SHOULDN'T ALLOWED TO INPUTED,
+  BUT HERE WITH THIS APPLICATION IT'S POSSIBLE TO DO, PLEASE 
+  RECHECK THE FORM VALIDATIONS....
+  
+  
+  THESE ARE SOME OF BUGS....
+
+- Pada saat pencarian obat, baik di unit maupun di gudang besar (farmasi), 
+   list yang DITAMPILKAN adalah data obat DARI GUDANG BESAR (ms_barang)
+   TANPA memfilter UNIT, yang di filter HANYA STATUS OBAT (aktif).
+   
+- Function (fill()) pada proses filter masih belum sempurna, masih banyak 
+  yang masuk ke field yang salah.
+
+- Pada permintaan Obat, Jika user Login == ADMIN maka pada field unit 
+  di tampilkan value == 'ADMIN-UserName' 
+  
+- INPUT_PERMINTAAN_OBAT.PHP ===>>> WHERE'S THE SEARCH ??
+   STILL OLD ROUTING??
+
+- NILAI TUSLA DITAMBAHKAN SAAT OBAT MASUK KE GUDANG APOTEK;
+   transaksi terima barang di modul apotek or  transaksi distribusi_kontrol di 
+   modul gudang.
+
+- Tusla di tambahkan PER-ITEM, mis;
+   =============================================================
+   |    nama  |      Harga   |   QTY   |    Tusla   | Subtotal |
+   | ======== |============= |======== |============|========  |
+   |  konidin |   Rp. 4000   |   2     |  Rp. 500   | Rp. 9000 |
+   =============================================================
+   
+- Pada Report Form Resep Obat (cetak_resep_*.php) tambahkan info jenis 
+   pembayaran pasien.
+
+- Racikan Masih terlalu ribet, tolong disederhanakan ....
+
+- Tambahkan fungsi pencarian pada cari resep di modul kasir.
+
+- Daftar Resep sebaiknya di sort desc berdasarkan tanggal or no transaksi.
+
+- Informasi yang di tampilkan pada Daftar Resep belum sempurna, masih ada 
+   beberapa field yang kosong, pdhal di dabase ada data nya (missed join kah?).
+   
+- ppn di kasir_tes.php ==> 10% bukan 30%
+
+- Struk masih ngambil data dari resep lain.
+...
+
+--------------------------- OVER ALL BUGS -------------------------
+PLEASE CHECK EACH TRANSACTION RESULTS ON DATABASE, WHETHER 
+THE RESULT IS RIGHT OR WRONG? OF COURSE DO IT OFTENLY....
+--------------------------------------------------------------------
+
+MORE TO COME .... :( 
+
+===============
+3:34 PM 7/21/2011
+Jalu Ahmad Pambudi
+===============

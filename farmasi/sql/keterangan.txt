@@ -1,0 +1,188 @@
+1. file yang terintegrasi dengan db simrs (disini nama db nya simrs):
+	- action/string_pasien.php
+	- action/insert_no_resep.php
+	- action/insert_no_resep_kasir.php
+	- action/string_no_resep_kasir.php
+   	- content/pasien.php
+	- content/history_resep.php
+	- content/resep_reg_igd.php
+	- content/resep_reg_oca.php
+	- content/resep_reg_rawat_jalan.php
+	- content/resep_reg_rawat_inap.php
+	- content/resep_reg_lab.php
+	- content/resep_reg_radiologi.php
+	- content/resep_reg_kasir_tes.php
+	- content/kasir_tes.php
+	- content/lihat_resep_igd.php
+	- content/lihat_resep_lab.php
+	- content/lihat_resep_oca.php
+	- content/lihat_resep_radiologi.php
+	- content/lihat_resep_rawat_inap.php
+	- content/lihat_resep_rawat_jalan.php
+	- content/resep_reg.php
+
+2. konkesi menggunakan db_apotek3
+3. penambahan field pada :
+	- tabel ms_barang => no_batch, no_rak
+	- tabel permintaan_unit => create_datetime, create_date
+	- tabel stok_opname => stok_lab, stok_rad
+	- tabel resep_head => no_ket
+
+4. file yang di update selain dari yang no 1 ,.diantaranya :
+	- home.php
+	A. folder action 
+		- string_daftar_barang_kadaluarsa
+		- string_daftar_barang
+		- string_obat_rawat_jalan
+		- string_obat_rawat_inap
+		- string_obat_radiologi
+		- string_obat_oca
+		- string_obat_lab
+		- string_obat_igd
+		- string_daftar_barang_igd
+		- string_daftar_barang_apt
+		- barang_kadaluarsa
+		- insert_barang
+		- update_barang
+		- insert_pencetakan_apt
+		- hapus_resep_reg_rawat_jalan
+		- hapus_resep_reg_rawat_inap
+		- hapus_resep_reg_radiologi
+		- hapus_resep_reg_oca
+		- hapus_resep_reg_lab
+		- hapus_resep_reg_igd
+		- hapus_resep_reg
+		- hapus_racik_obat
+		- hapus_racik_obat_rawat_jalan
+		- hapus_racik_obat_rawat_inap
+		- hapus_racik_obat_radiologi
+		- hapus_racik_obat_oca
+		- hapus_racik_obat_lab
+		- hapus_racik_obat_igd
+		- simpan_resep_umum
+		- insert_resep_reg_umum
+		- hapus_resep_reg_umum
+		- insert_no_resep
+		- insert_active_resep
+		- hapus_racik_obat_umum
+		- insert_racik_obat_umum
+		- to_preview_resep_lab
+		- to_preview_resep_radiologi
+		- simpan_resep_lab
+		- simpan_resep_oca
+		- simpan_resep_radiologi
+		- simpan_resep_rawat_inap
+		- simpan_resep_rawat_jalan
+		- simpan_resep_igd
+		- insert_total_pembayaran
+		- string_no_resep_kasir
+		- insert_resep_to_kasir
+		- to_preview_resep_rawat_inap
+		- to_preview_resep_rawat_jalan
+		- to_preview_resep_oca
+		- to_preview_resep_igd
+		- to_preview_resep
+		- insert_detail_racik_obat
+		- insert_detail_racik_obat_igd
+		- insert_detail_racik_obat_oca
+		- insert_detail_racik_obat_lab_radiologi
+		- insert_detail_racik_obat_rawat_inap
+		- insert_detail_racik_obat_rawat_jalan
+		- insert_detail_racik_obat_umum
+		- insert_resep_reg
+		- insert_resep_reg_igd
+		- insert_resep_reg_oca
+		- insert_resep_reg_radiologi
+		- insert_resep_reg_rawat_jalan
+		- insert_resep_reg_rawat_inap
+		- insert_resep_reg_umum
+		- insert_resep_reg_lab
+
+	B. Folder content
+		- lihat_resep_rawat_jalan
+		- lap_kasir
+		- lihat_resep_igd
+		- lihat_resep_lab
+		- lihat_resep_oca
+		- lihat_resep_radiologi
+		- lihat_resep_rawat_inap
+		- lihat_resep_umum
+		- kasir_tes
+		- menu_kasir
+		- resep_reg_rawat_jalan
+		- pasien
+		- daftar_barang_kadaluarsa
+		- daftar_barang
+		- daftar_barang_unit
+		- stok_opname
+		- lap_ms_barang_kadaluarsa
+		- lap_ms_barang
+		- lap_ms_barang_kadaluarsa_pdf
+		- lap_ms_barang_pdf
+		- daftar_permintaan_obat
+		- input_daftar_barang
+		- resep_reg_umum
+		- racik_obat_umum
+		- input_obat_umum
+		- resep_reg
+		- resep_reg_igd
+		- resep_reg_lab
+		- resep_reg_oca
+		- resep_reg_radiologi
+		- lap_kasir_pdf
+		- resep_reg_rawat_inap
+		- preview_resep
+		- input_obat
+		- input_obat_bebas
+		- input_obat_igd
+		- input_obat_oca
+		- input_obat_radiologi
+		- input_obat_rawat_inap
+		- input_obat_rawat_jalan
+		- input_obat_umum
+		- input_racik_obat_oca
+		- input_racik_obat_radiologi
+		- input_racik_obat_rawat_jalan
+		- input_racik_obat_rawat_inap
+		- input_racik_obat_umum
+		- input_racik_obat
+		- input_obat_lab
+		- input_racik_obat_igd
+
+5. ada penambahan data dalam table database yang berhubungan dengan akses dan tampilan diantaranya :
+	- pelayanan
+	- tbl_menu
+	- user
+
+6. ada penambahan table database :
+	- daftar_akun
+	- jurnal_penyesuaian
+	- jurnal_umum
+
+7. penambahan file :
+ 	A. folder Action
+	- hapus_jurnal_umum
+	- hapus_jurnal_penyesuaian
+	- update_rekening
+	- insert_rek
+	- haus_daftar_rekening
+	- string_daftar_akun
+	- cetak_neraca
+	- cetak_perubahan_modal
+	- cetak_labarugi
+	- hitung_penyesuaian
+	- simpan_jurnal_umum_penyesuaian_detail
+	- simpan_jurnal_umum_detail
+
+	B. Folder content
+	- jurnal_penyesuaian
+	- jurnal_umum
+	- edit_daftar_rekening
+	- daftar_akun
+	- lap_neraca
+	- lap_perubahan_modal
+	- lap_laba_rugi
+	- neraca_lajur
+	- neraca_saldo
+	- lihat_buku_besar
+	- buku_besar

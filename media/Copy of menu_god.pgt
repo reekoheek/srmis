@@ -1,0 +1,54 @@
+========== Description Part Begin ==========
+Description = 
+LastUpdateTime = 37434.458101852
+PreviewPath = 
+ProgID = PageletServer.DynamicMenu
+Title = AppMenu1
+Version = 4.00
+========== Description Part End ==========
+========== Parameter Part Begin ==========
+CrossFrame = 0;0;0;0;;1;
+MenuBody0 = 7;0;2;1;0;0;0;0;0;3;0;0;0;90;0;3;0;0;0;0;0;13818075;0;;3
+MenuBody1 = 3;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuBody2 = 4;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuBody3 = 3;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuBody4 = 2;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuBody5 = 12;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuBody6 = 2;1;0;3;0;0;0;0;2;3;10066329;1;0;67;1;1;0;6710886;6710886;6710886;6710886;16251129;0;F:\\htdocs\\klinikanak\\media\\bg_pulldown.gif;2
+MenuItem0_0 = 0;1;;;0;Menu Item 1;2;0;1;;;_self;;1;15659761;13811126;1;1;;;3;3;0;1;0;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;F:\\htdocs\\klinikanak\\media\\favicon.gif;F:\\htdocs\\klinikanak\\media\\favicon.gif;22;20;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem0_1 = 0;0;;;0;1;10070188;1;F:\\htdocs\\klinikanak\\media\\toolbar.start.gif;;3;15;0
+MenuItem0_2 = 2;2;;;0; File ;0;0;1;;;_self;;1;15659761;13811126;1;0;;;3;3;1;1;1;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem0_3 = 2;2;;;0; Daftar ;0;0;1;;;_self;;1;15659761;13811126;1;0;;;3;3;1;1;1;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem0_4 = 2;2;;;0; Statistik ;0;0;1;;;_self;;1;15659761;13811126;1;0;;;3;3;1;1;1;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem0_5 = 2;2;;;0; Setting ;0;0;1;;;_self;;1;15659761;13811126;1;0;;;3;2;1;1;1;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem0_6 = 2;2;;;0; Help ;0;0;1;;;_self;;1;15659761;13811126;1;0;;;3;3;1;1;1;0;13818075;13818075;13818075;13818075;6956042;6956042;6956042;6956042;;;0;0;0;;;0;0;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;
+MenuItem1_0 = 0;1;;;0;Home;0;0;1;;home/;_self;;1;16251129;13811126;1;0;;;2;3;0;1;0;0;16252927;16252927;16252927;16252927;6956042;6956042;6956042;6956042;F:\\htdocs\\klinikanak\\images\\menu_home.png;F:\\htdocs\\klinikanak\\images\\menu_home.png;16;16;0;;;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_r.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_w.gif;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem1_1 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem1_2 = 0;1;;;0;Logout          ;0;0;1;;login.php?page=logout;_self;;1;16251129;13811126;1;0;;;2;3;0;1;0;0;16252927;16252927;16252927;16252927;6956042;6956042;6956042;6956042;F:\\htdocs\\klinikanak\\images\\menu_logout.png;F:\\htdocs\\klinikanak\\images\\menu_logout.png;16;16;0;;;0;0;0;;;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem2_0 = 0;1;;;0;Pendaftaran Pasien;0;0;1;;daftar/pendaftaran/;_self;;1;16777215;13811126;1;0;;;2;3;0;1;0;0;16252927;16252927;16252927;16252927;6956042;6956042;6956042;6956042;F:\\htdocs\\klinikanak\\images\\menu_daftar.png;F:\\htdocs\\klinikanak\\images\\menu_daftar.png;16;16;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem2_1 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem2_2 = 0;1;;;0;Pasien Daftar Hari Ini;0;0;1;;daftar/pasien_daftar/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;-1;-1;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem2_3 = 0;1;;;0;Pasien Periksa Hari Ini          ;0;0;1;;daftar/pasien_periksa/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;-1;-1;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem3_0 = 2;2;;;0;Kunjungan Pasien;0;0;1;;;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;F:\\htdocs\\klinikanak\\images\\menu_chart2.png;F:\\htdocs\\klinikanak\\images\\menu_chart2.png;16;16;0;;;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_r.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\arrow_r.gif;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem3_1 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem3_2 = 0;1;;;0;Penyakit          ;0;0;1;;statistik/sepuluh_besar/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;F:\\htdocs\\klinikanak\\images\\menu_statistik.png;F:\\htdocs\\klinikanak\\images\\menu_statistik.png;16;16;0;;;0;0;0;;;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem4_0 = 0;1;;;0;Semua;0;0;1;;statistik/kunjungan/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;-1;-1;0;;;-1;-1;0;;;0;0;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem4_1 = 1;1;;;0;Baru - Lama          ;0;0;1;;statistik/kunjungan_baru_lama/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;7;7;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_0 = 0;1;;;0;Data Pasien      ;0;0;1;;setting/pasien/;_self;;1;16777215;13811126;1;0;;;2;2;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;F:\\htdocs\\klinikanak\\images\\menu_pasien.png;F:\\htdocs\\klinikanak\\images\\menu_pasien.png;16;16;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_1 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem5_10 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem5_11 = 0;1;;;0;Setting Aplikasi;0;0;1;;setting/aplikasi/;_self;;1;16777215;13811126;1;0;;;2;2;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;F:\\htdocs\\klinikanak\\images\\menu_aplikasi.png;F:\\htdocs\\klinikanak\\images\\menu_aplikasi.png;16;16;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_2 = 0;1;;;0;Data Pelayanan;0;0;1;;setting/pelayanan/;_self;;1;16777215;13811126;1;0;;;2;2;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_3 = 0;1;;;0;Data Imunisasi;0;0;1;;setting/imunisasi/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_4 = 0;1;;;0;Data Agama;0;0;1;;setting/agama/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_5 = 0;1;;;0;Data Pekerjaan;0;0;1;;setting/pekerjaan/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_6 = 0;1;;;0;Data Pendidikan;0;0;1;;setting/pendidikan/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_7 = 0;1;;;0;Data Status Nikah          ;0;0;1;;setting/status_nikah/;_self;;1;16777215;13811126;1;0;;;2;3;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;;;6;0;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem5_8 = 0;0;;;0;1;10070188;0;;;0;0;0
+MenuItem5_9 = 0;1;;;0;Data User;0;0;1;;setting/pengguna/;_self;;1;16777215;13811126;1;0;;;2;2;0;0;0;0;16252927;16252927;16252927;16252927;0;0;0;0;F:\\htdocs\\klinikanak\\images\\menu_user.png;F:\\htdocs\\klinikanak\\images\\menu_user.png;16;16;0;;;0;0;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem6_0 = 0;1;;;0;Help Topics          ;0;0;1;;javascript:bukaHelp('http://localhost/klinikanak/help.php');_self;;1;16777215;13811126;1;0;;;2;3;0;1;0;0;16252927;16252927;16252927;16252927;6956042;6956042;6956042;6956042;F:\\htdocs\\klinikanak\\images\\menu_help.png;F:\\htdocs\\klinikanak\\images\\menu_help.png;16;16;0;;;-1;-1;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+MenuItem6_1 = 0;1;;;0;About;0;0;1;;javascript:bukaAbout('http://localhost/klinikanak/about.php');_self;;1;16777215;13811126;1;0;;;2;3;0;1;0;0;16252927;16252927;16252927;16252927;6956042;6956042;6956042;6956042;F:\\htdocs\\klinikanak\\images\\menu_about.png;F:\\htdocs\\klinikanak\\images\\menu_about.png;16;16;0;;;-1;-1;0;;;10;10;0;Tahoma,Arial;Tahoma,Arial;8;8;0;0;0;16777215;0;0;0;0;0;0;0;0;0;0;
+Scrolling0 = 0;16252927;1;14073525;1;;;3;3;0;1;1;16252927;16252927;16252927;16252927;1;0;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_enabled.gif;-1;-1;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_enabled.gif;-1;-1;0
+Scrolling1 = 0;16252927;1;14073525;1;;;3;3;0;1;1;16252927;16252927;16252927;16252927;1;0;0;0;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_enabled.gif;-1;-1;0;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_disabled.gif;C:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_enabled.gif;-1;-1;0
+TopMenuBody = 2;400;uueoehr;0;1;1;0;0;0;0;0;0;0;http://localhost/klinikanak/images/;1;0;0;http://localhost/klinikanak/;1;0;100;0;http://localhost/klinikanak/media/;67108909
+========== Parameter Part End ==========

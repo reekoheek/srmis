@@ -1,0 +1,15 @@
+#login_bodi {
+	background-color: #D4D0C8;
+	margin-top: 10%;
+}
+#login {
+	font-family: "Trebuchet Ms", Arial, Verdana;
+	font-size: 14px;
+}
+.login_table {
+	height:100%;
+	width: 60%;
+}
+.login_table td {
+	text-align: center;
+}

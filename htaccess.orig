@@ -1,0 +1,18 @@
+#Options FollowSymLinks
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^([a-zA-Z0-9\-\_/]*)$ /simrs/index.php/$1/ [L]
+</IfModule>
+<IfModule mod_apache2.c>
+	php_value register_globals 0
+	php_value magic_quotes_gpc 1
+	php_value session.auto_start 0
+</IfModule>
+#<IfModule mod_php4.c>
+#	php_value register_globals 0
+#	php_value magic_quotes_gpc 1
+#	php_value session.auto_start 0
+#</IfModule>
+
+ErrorDocument 404 http://localhost/simrs/home/home
