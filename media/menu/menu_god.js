@@ -47,8 +47,9 @@ stm_aix("p7i2","p3i0",[0,"Pindah Kamar Perawatan Rawat Inap","","",-1,-1,0,"rana
 stm_aix("p7i3","p3i0",[0,"Statistik Kunjungan","","",-1,-1,0,"ranap/statistik_kunjungan_ranap/"]);
 stm_ep();
 stm_aix("p0i6","p0i1",[0," Farmasi "]);
-stm_bpx("p8","p1",[1,4,0,0,0,3,0]);
-stm_aix("p8i0","p2i5",[0," Farmasi ","","",-1,-1,0,"farmasi/verification.php"]);
+stm_bpx("p8","p1",[/*1,4,0,0,0,3,0*/]);
+stm_aix("p8i0","p2i5",[0," Pembelian ","","",-1,-1,0,"farmasi/purchasing"]);
+stm_aix("p8i1","p2i5",[0," Stok ","","",-1,-1,0,"farmasi/stock"]);
 stm_ep();
 stm_aix("p0i7","p0i1",[0," Filing "]);
 stm_bpx("p9","p1",[]);

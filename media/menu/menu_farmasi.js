@@ -7,7 +7,7 @@ stm_aix("p1i0","p0i1",[0,"Home","","",-1,-1,0,"home/home/","_self","","","menu_h
 stm_aix("p1i1","p0i0",[6,1,"#ACA899","",0,0]);
 stm_aix("p1i2","p1i0",[0,"Keluar          ","","",-1,-1,0,"login.php?page=logout","_self","","","menu_logout.png","menu_logout.png"]);
 stm_ep();
-stm_aix("p0i2","p0i1",[0," Farmasi "]);
+stm_aix("p0i2","p0i1",[0," Farmasiaaa "]);
 stm_bpx("p2","p1",[1,4,0,0,0,3,0]);
 stm_aix("p2i0","p0i1",[0," Farmasi ","","",-1,-1,0,"farmasi/verificationxxx.php","_self","","","","",0,0,0,"","",0,0,0,0,1,"#FFFFFF",1,"#B6BDD2",0,"","",2,3,0,0,"#FFFFF7","#000000"]);
 stm_ep();
