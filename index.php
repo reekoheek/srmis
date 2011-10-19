@@ -13,6 +13,7 @@
    } else {
       //if() {
       if(is_file(MODULES_DIR.$_part[module]."/index.php") && @in_array($_part[module], $_arr_module_accepted)) {
+          
          //modules/setting
          include_once MODULES_DIR . $_part[module] . "/index.php";
 
@@ -31,6 +32,7 @@
          }
       } elseif(APP_DEBUG == "ON") {
          echo "Module ".$_part[module]." Tidak Ada.<br />";
+         header('Location: login.php');
          //print_r($_arr_module_accepted);
       } else {
          header("LOCATION:".URL."index.html");
